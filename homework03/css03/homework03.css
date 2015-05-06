@@ -1,0 +1,26 @@
+body{
+    background-color: #0099ff;
+}
+.lake{
+    border: 2px solid #000000;
+    font-family:"Times New Roman", "Georgia", Serif;
+    font-size: 14px;
+    margin: 5px;
+    padding: 5px;
+}
+.lake img{
+    width: 640px;
+    height: 480px;
+}
+.town{
+    border: 1px solid #ff0033;
+    font-family: "Arial","Verdana" ,"Courier New";
+    font-size: 14px;
+    margin: 5px;
+    padding: 5px;
+}
+.town img{
+    width: 640px;
+    height: 480px;
+    opacity: 0.5;  
+}
