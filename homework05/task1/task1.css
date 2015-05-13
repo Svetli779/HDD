@@ -1,0 +1,10 @@
+.count{
+    background-color: blue;
+    width: 150px;
+    height: 50px;
+}
+.uncount{
+    background-color:green;
+    width: 150px;
+    height: 50px;
+}
