@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <title></title>
     </head>
-    <body> 
-        <div>
+    <body>
+            <div>
             <h1>Case 1.</h1>
         <?php
         $cars=  array("BMW","Lotus","Volvo","Ferrari","Porshe","Lamborghini");
@@ -15,13 +15,13 @@
             echo "I want to buy ".$value;
             echo '</p>';
             }
+            unset($cars[5]);
         ?>
             </div>
          <div>
             <h1>Case 2.</h1>
         <?php
-        $car=  array("BMW","Lotus","Volvo","Ferrari","Porshe",);
-        foreach ($car as $key=>$value )
+        foreach ($cars as $key=>$value )
             {
             echo '<p>';
             echo "I will buy ".$value;
