@@ -9,10 +9,10 @@
        $cars= array('BMW'=>'bmw.com/com/en/','FERRARI'=>'ferrari.com/bg_bg/',
             'lotus'=>'lotuscars.com/','lamborghini'=>'lamborghini.com/en/home/',
             'Porshe'=>'porsche.com/');
-       shuffle($cars);
-       foreach ($cars as $value) {
-           echo "<a href='http://www.$value'>$value</a><br/>";
+       foreach ($cars as $key=>$value) {
+           echo "<a href='http://www.$value'>$key</a><br/>";
        }
+
         ?>
     </body>
 </html>
