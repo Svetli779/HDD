@@ -1,0 +1,1 @@
+SELECT * FROM `country` WHERE (`Continent` = "Asia")AND `SurfaceArea`<13000 OR(`Continent`="South America") AND `SurfaceArea` < 13000;
