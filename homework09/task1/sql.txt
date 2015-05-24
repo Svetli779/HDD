@@ -1,0 +1,37 @@
+
+																syzdawane na tablica
+CREATE TABLE `experiment`.`cars` () ENGINE = InnoDB;
+CREATE TABLE `experiment`.`cars` ( `cars_id` INT(12) NOT NULL AUTO_INCREMENT , `color` VARCHAR(32) NOT NULL , `year` DATE NOT NULL , `region_id` INT(11) NOT NULL , `brands_id` INT(11) NOT NULL , PRIMARY KEY (`cars_id`) ) ENGINE = InnoDB;
+CREATE TABLE `experiment`.`brands` ( `brands_id` INT(12) NOT NULL AUTO_INCREMENT , `name` VARCHAR(32) NOT NULL , PRIMARY KEY (`brands_id`) ) ENGINE = InnoDB;
+CREATE TABLE `experiment`.`regions` ( `region_id` INT(12) NOT NULL AUTO_INCREMENT , `name` VARCHAR(32) NOT NULL , `country` VARCHAR(32) NOT NULL , PRIMARY KEY (`region_id`) ) ENGINE = InnoDB;
+
+
+																dobawqne na unikalen klu4
+ALTER TABLE `cars` ADD UNIQUE(`region_id`);
+ALTER TABLE `cars` ADD UNIQUE(`bradns_id`);
+
+
+																syzdawame foreign key
+ALTER TABLE `cars`ADD CONSTRAINT `cars` FOREIGN KEY (`brands_id`) REFERENCES `experiment`.`brands`(`brands_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `cars` ADD FOREIGN KEY (`region_id`) REFERENCES `experiment`.`regions`(`region_id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+																dobawqne na kola
+INSERT INTO `brands`(`brands_id`, `name`) VALUES (null,"Ford");
+INSERT INTO `regions`(`region_id`, `name`, `country`) VALUES (null,"Sofia","Bulgaria");
+INSERT INTO `cars`(`cars_id`, `color`, `year`, `brands_id`, `region_id`) VALUES (null,"red",2012-12-12,1,1);
+
+
+INSERT INTO `brands`(`brands_id`, `name`) VALUES (null,"Lotus");
+INSERT INTO `regions`(`region_id`, `name`, `country`) VALUES (null,"Plovdiv","Bulgaria");
+INSERT INTO `cars`(`cars_id`, `color`, `year`, `brands_id`, `region_id`) VALUES (null,"yellow",2014-01-01,2,2);
+
+
+INSERT INTO `brands`(`brands_id`,`name`) VALUES (null,"Porshe");
+INSERT INTO `regions`(`region_id`,`name`,`country`) VALUES (null,"Paris","France");
+INSERT INTO `cars`(`cars_id`,`color`,`year`,`brands_id`,`region_id`) VALUES (null,"red",2015-05-05,3,3);
+
+
+															promqna na stoinosti
+UPDATE `experiment`.`cars` SET `color` = 'green' WHERE `cars`.`cars_id` = 2;
+UPDATE `experiment`.`regions` SET `name` = 'Varna' WHERE `regions`.`region_id` = 2;
